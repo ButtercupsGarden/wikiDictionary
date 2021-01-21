@@ -1,3 +1,4 @@
+import styles from '../styles/Index.module.scss'
 import Head from 'next/head'
 
 export default function Home() {
@@ -8,7 +9,14 @@ export default function Home() {
       </Head>
 
       <main>
-        Unilfo
+        <div className={styles.main}>
+          <div className={styles.title}>
+            TEST
+          </div>
+          <div className={styles.title}>
+            TEST
+          </div>
+        </div>
       </main>
 
     </div>
