@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const uri = '../db/data.JSON'
+const uri = 'data.JSON'
 let data = fs.readFileSync(uri)
 
 function getAllPhrases() {
@@ -23,7 +23,7 @@ function addPhrase(phrase, translate, active = false) {
   }
 
   phrases.push(newPhrase)
-  fs.writeFileSync('../db/data.JSON', JSON.stringify(phrases, null, 2))
+  fs.writeFileSync('data.JSON', JSON.stringify(phrases, null, 2))
   return newPhrase
 }
 

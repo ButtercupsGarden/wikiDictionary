@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "phrase": "How is it going?",
+    "translate": "Как идут дела?",
+    "active": false
+  },
+  {
+    "id": 2,
+    "phrase": "How's life?",
+    "translate": "Как жизнь?",
+    "active": true
+  },
+  {
+    "id": 3,
+    "phrase": "How are things?",
+    "translate": "Как оно?",
+    "active": true
+  },
+  {
+    "id": 4,
+    "phrase": "Long time no see!",
+    "translate": "Давно не виделись!",
+    "active": true
+  },
+  {
+    "id": 5,
+    "phrase": "test",
+    "translate": "тест",
+    "active": false
+  }
+]
