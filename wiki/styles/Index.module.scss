@@ -3,9 +3,17 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 .title {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   color: blueviolet;
+  height: 100%;
+  width: 100%;
 }
 
 .ldsRoller {
@@ -93,3 +101,5 @@
     transform: rotate(360deg);
   }
 }
+
+

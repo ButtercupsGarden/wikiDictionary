@@ -1,6 +1,7 @@
 import styles from '../styles/Index.module.scss'
-import Head from 'next/head'
 import {useState, useEffect} from 'react'
+import Header from '../components/Header'
+import Card from '../components/Card'
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min)
@@ -36,30 +37,23 @@ export default function Home({data}) {
   }
 
   return (
-    <div className="container">
-      <Head>
-        <title>Учим английский по разговорным фразам</title>
-      </Head>
-
-      <main>
-        <div className={styles.main}>
-          <div className={styles.title}>
-            {phrases && phrases.map((phrase) =>
-              <div key={phrase.id}>{phrase.phrase}</div>
-            )}
-          </div>
-          <div className={styles.title}>
-            TEST
-          </div>
+    <Header title={'Учим английский'}>
+      <div className={styles.main}>
+        {/*<div className={styles.title}>*/}
+        {/*  {phrases && phrases.map((phrase) =>*/}
+        {/*    <div key={phrase.id}>{phrase.phrase}</div>*/}
+        {/*  )}*/}
+        {/*</div>*/}
+        <div className={styles.title}>
+          <Card/>
         </div>
-      </main>
-
-    </div>
+      </div>
+    </Header>
   )
 }
 
 export async function getServerSideProps(context) {
-  // console.log(context)
+  console.log(context)
   const {getAllPhrases} = require('../util/util')
 
   const data = getAllPhrases()
