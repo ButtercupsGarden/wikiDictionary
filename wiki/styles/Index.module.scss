@@ -1,11 +1,76 @@
 .main {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 900px;
+  height: 320px;
+  left: calc(50% - 900px/2 - 20px);
+  top: calc(50% - 320px/2 - 258px);
+
+  background: linear-gradient(180deg, #09262F 51.56%, rgba(165, 166, 189, 0.92) 87.5%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
 }
 .title {
   color: blueviolet;
+}
+
+.frazaEng{
+  position: absolute;
+  width: 800px;
+  height: 80px;
+  left: 300px;
+  top: 117px;
+
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+
+.frazaRus{
+  position: absolute;
+  width: 800px;
+  height: 80px;
+  left: 300px;
+  top: 214px;
+
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+
+.next{
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  left: 910px;
+  top: 352px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+.perevod{
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  left: 310px;
+  top: 352px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
 }
 
 .ldsRoller {

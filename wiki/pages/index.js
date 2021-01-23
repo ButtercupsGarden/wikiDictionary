@@ -49,8 +49,12 @@ export default function Home({data}) {
             {/*)}*/}
           </div>
           <div className={styles.title}>
-            TEST
           </div>
+          <div className={styles.frazaRus}>frazaRus</div>
+          <div className={styles.frazaEng}>frazaEng</div>
+          <div className={styles.next}>next</div>
+          <div className={styles.perevod}>perevod</div>
+
         </div>
       </main>
 
