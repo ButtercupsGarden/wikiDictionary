@@ -44,9 +44,9 @@ export default function Home({data}) {
       <main>
         <div className={styles.main}>
           <div className={styles.title}>
-            {phrases && phrases.map((phrase) =>
-              <div key={phrase.id}>{phrase.phrase}</div>
-            )}
+            {/*{phrases && phrases.map((phrase) =>*/}
+            {/*  <div key={phrase.id}>{phrase.phrase}</div>*/}
+            {/*)}*/}
           </div>
           <div className={styles.title}>
             TEST
