@@ -2,6 +2,9 @@ import styles from '../styles/Index.module.scss'
 import {useState, useEffect} from 'react'
 import Header from '../components/Header'
 import Card from '../components/Card'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faPlus} from '@fortawesome/free-solid-svg-icons'
+import Router from 'next/router'
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min)
@@ -10,16 +13,19 @@ function getRandomIntInclusive(min, max) {
 }
 
 export default function Home({data}) {
-  const [phrases, setPhrases] = useState(null)
+  const [currentPhrase, setCurrentPhrase] = useState(null)
+  const [next, setNext] = useState(0)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setPhrases(data)
-    }, 2000)
-  }, [data])
+    setTimeout(() => {
+      let id = getRandomIntInclusive(0, data.length - 1)
+      console.log(data[id])
+      setCurrentPhrase(data[id])
+    }, 0)
+  }, [data, next])
 
 
-  if (!phrases) {
+  if (!currentPhrase) {
     return (
       <div className={styles.main}>
         <div className={styles.ldsRoller}>
@@ -39,21 +45,20 @@ export default function Home({data}) {
   return (
     <Header title={'Учим английский'}>
       <div className={styles.main}>
-        {/*<div className={styles.title}>*/}
-        {/*  {phrases && phrases.map((phrase) =>*/}
-        {/*    <div key={phrase.id}>{phrase.phrase}</div>*/}
-        {/*  )}*/}
-        {/*</div>*/}
+        <div className={styles.sideBar}>
+          <div onClick={() => Router.push('/asd')}>
+            <FontAwesomeIcon className={styles.add} icon={faPlus} size='4x'/>
+          </div>
+        </div>
         <div className={styles.title}>
-          <Card/>
+          <Card phrase={currentPhrase} next={() => setNext(next + 1)}/>
         </div>
       </div>
     </Header>
   )
 }
 
-export async function getServerSideProps(context) {
-  console.log(context)
+export async function getServerSideProps() {
   const {getAllPhrases} = require('../util/util')
 
   const data = getAllPhrases()
@@ -66,7 +71,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      data
+      data,
     },
   }
 }

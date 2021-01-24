@@ -1,4 +1,4 @@
-.card{
+.card {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -7,12 +7,13 @@
   height: 45%;
   min-height: 300px;
   min-width: 375px;
-  background: linear-gradient(180deg, #09262F 51.56%, rgba(165, 166, 189, 0.92) 87.5%);
+  background: linear-gradient(180deg, #E3F8FF 51.56%, rgba(242, 242, 242, 0.92) 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   padding: 20px;
 }
-.phrase{
+
+.phrase {
   width: 90%;
   height: 100px;
   left: 300px;
@@ -26,49 +27,6 @@
   background: #FFFFFF;
   border-radius: 20px;
   margin-bottom: 20px;
-}
-.translate{
-  width: 90%;
-  height: 100px;
-  left: 300px;
-  top: 117px;
-
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-
-  background: #FFFFFF;
-  border-radius: 20px;
-  margin-bottom: 20px;
-
-}
-.buttons{
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.button{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-
-  width: 200px;
-  height: 50px;
-  left: 900px;
-  top: 347px;
-
-  background: #F7FFC9;
-  mix-blend-mode: normal;
-  border-radius: 10px;
-}
-.text{
-  width: 180px;
-  height: 40px;
-  left: 910px;
-  top: 352px;
 
   font-family: Roboto;
   font-style: normal;
@@ -79,3 +37,75 @@
   color: #000000;
 }
 
+.translate {
+  width: 90%;
+  height: 100px;
+  left: 300px;
+  top: 117px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  background: #fff;
+  border-radius: 20px;
+  margin-bottom: 20px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #fff;
+}
+
+.buttons {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 200px;
+  height: 50px;
+  left: 900px;
+  top: 347px;
+
+  background: #FFC0CB;
+  mix-blend-mode: normal;
+  border-radius: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #000000;
+}
+
+.button:hover {
+  background: #82BFF8;
+}
+
+.active {
+  opacity: 1;
+  transition: 1s;
+  background: #fff;
+  color: black;
+}

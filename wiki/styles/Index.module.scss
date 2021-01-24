@@ -1,3 +1,4 @@
+$color : #82BFF8;
 .main {
   display: flex;
   flex-flow: column nowrap;
@@ -100,6 +101,28 @@
   100% {
     transform: rotate(360deg);
   }
+}
+.sideBar{
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  color: $color ;
+}
+.add{
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+.add:hover{
+  color: #FFC0CB ;
+  -o-transform: rotate(720deg);
+  -ms-transform: rotate(720deg);
+  -moz-transform: rotate(720deg);
+  -webkit-transform: rotate(720deg);
+  transform: rotate(720deg);
 }
 
 
