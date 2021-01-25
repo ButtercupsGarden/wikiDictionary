@@ -46,7 +46,7 @@ export default function Home({data}) {
     <Header title={'Учим английский'}>
       <div className={styles.main}>
         <div className={styles.sideBar}>
-          <div onClick={() => Router.push('/asd')}>
+          <div onClick={() => Router.push('/add')}>
             <FontAwesomeIcon className={styles.add} icon={faPlus} size='4x'/>
           </div>
         </div>

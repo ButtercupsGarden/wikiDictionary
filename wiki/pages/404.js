@@ -9,7 +9,7 @@ export default function PageError() {
           Страница не найдена
         </h1>
       </div>
-      <div className={styles.title}>
+      <div className={styles.titleRef}>
         <Link href="/">
           <h1>
             На главную
