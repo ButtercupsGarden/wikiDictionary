@@ -1,5 +1,9 @@
 .main {
   position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   width: 900px;
   height: 320px;
   left: calc(50% - 900px/2 - 20px);
@@ -13,64 +17,68 @@
   color: blueviolet;
 }
 
+.buttons{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-top: 20px;
+}
+.next:hover{
+  background: blueviolet;
+}
+.perevod:hover{
+  background: blueviolet;
+}
+
+
 .frazaEng{
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 800px;
   height: 80px;
   left: 300px;
   top: 117px;
+  margin-top: 20px;
 
   background: #FFFFFF;
   border-radius: 20px;
 }
 
 .frazaRus{
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 800px;
   height: 80px;
   left: 300px;
   top: 214px;
+  margin-top: 20px;
 
   background: #FFFFFF;
   border-radius: 20px;
 }
 
 .next{
-  position: absolute;
-  width: 180px;
-  height: 40px;
-  left: 910px;
-  top: 352px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 28px;
+  width: 150px;
+  height: 60px;
+  background-color: #82BFF8;
   display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-
-  color: #000000;
+  border-radius: 20px;
 }
 
 .perevod{
-  position: absolute;
-  width: 180px;
-  height: 40px;
-  left: 310px;
-  top: 352px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 28px;
+  width: 150px;
+  height: 60px;
+  background-color: #82BFF8;
   display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-
-  color: #000000;
+  border-radius: 20px;
 }
 
 .ldsRoller {

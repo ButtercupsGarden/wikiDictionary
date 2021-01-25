@@ -10,12 +10,12 @@ function getRandomIntInclusive(min, max) {
 
 export default function Home({data}) {
   const [phrases, setPhrases] = useState(null)
+  const [next, setNext] = useState(0)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setPhrases(data)
-    }, 2000)
-  }, [data])
+    let asd = getRandomIntInclusive(0,data.length-1)
+      setPhrases(data[asd])
+  }, [data, next])
 
 
   if (!phrases) {
@@ -44,16 +44,19 @@ export default function Home({data}) {
       <main>
         <div className={styles.main}>
           <div className={styles.title}>
-            {/*{phrases && phrases.map((phrase) =>*/}
-            {/*  <div key={phrase.id}>{phrase.phrase}</div>*/}
-            {/*)}*/}
           </div>
           <div className={styles.title}>
           </div>
-          <div className={styles.frazaRus}>frazaRus</div>
-          <div className={styles.frazaEng}>frazaEng</div>
-          <div className={styles.next}>next</div>
-          <div className={styles.perevod}>perevod</div>
+
+          <div className={styles.frazaEng}>{phrases.phrase}</div>
+          <div className={styles.frazaRus}>{phrases.translate}</div>
+
+
+          <div className={styles.buttons} >
+            <div className={styles.next} onClick={()=>setNext(next + 1)}>next</div>
+            <div className={styles.perevod}>perevod</div>
+          </div>
+
 
         </div>
       </main>
