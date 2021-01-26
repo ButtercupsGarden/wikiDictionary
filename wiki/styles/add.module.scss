@@ -1,0 +1,30 @@
+.main{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sidebar{
+  border: 1px solid #82BFF8;
+  height: 100vh;
+  width: 300px;
+}
+.inputarea{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.ch{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+.btnsave{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}

@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import styles from '../styles/card.module.scss'
+import {Button} from './button/Button'
 
 export default function Card({phrase, next}) {
   const [translate, setTranslate] = useState(false)
@@ -17,11 +18,11 @@ export default function Card({phrase, next}) {
           {phrase.phrase}
         </div>
         <div className={translate? styles.translate +" "+ styles.active: styles.translate}>
-          {phrase.translate}
+            {phrase.translate}
         </div>
         <div className={styles.buttons}>
-          <div className={styles.button} onClick={changeVisible}>Перевести</div>
-          <div className={styles.button} onClick={nextPhrase}>Далее</div>
+          <Button onClick={changeVisible} buttonStyle='btn--primary--solid' buttonSize='btn--small'>Перевести</Button>
+          <Button onClick={nextPhrase} buttonStyle='btn--primary--solid' buttonSize='btn--small'>Далее</Button>
         </div>
       </div>
   )

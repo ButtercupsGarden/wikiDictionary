@@ -6,10 +6,14 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPlus} from '@fortawesome/free-solid-svg-icons'
 import Router from 'next/router'
 
-function getRandomIntInclusive(min, max) {
+function getRandomIntInclusive(min, max, n=1) {
   min = Math.ceil(min)
   max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min + 1)) + min
+  let res = new Set()
+  while (res.size < n) res.add(Math.floor(Math.random() * (max - min + 1)) + min)
+  let setIter = res.values()
+  return setIter.next().value
+  // return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 export default function Home({data}) {
@@ -18,7 +22,7 @@ export default function Home({data}) {
 
   useEffect(() => {
     setTimeout(() => {
-      let id = getRandomIntInclusive(0, data.length - 1)
+      let id = getRandomIntInclusive(0, data.length - 1, currentPhrase?.id)
       console.log(data[id])
       setCurrentPhrase(data[id])
     }, 0)

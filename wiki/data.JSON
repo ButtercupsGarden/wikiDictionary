@@ -3,7 +3,7 @@
     "id": 1,
     "phrase": "How is it going?",
     "translate": "Как идут дела?",
-    "active": false
+    "active": true
   },
   {
     "id": 2,
@@ -25,8 +25,80 @@
   },
   {
     "id": 5,
-    "phrase": "test",
-    "translate": "тест",
-    "active": false
+    "phrase": "What are you up to?",
+    "translate": "Чем занимаешься?",
+    "active": true
+  },
+  {
+    "id": 6,
+    "phrase": "What have you been up to?",
+    "translate": "Чем занимался все это время?",
+    "active": true
+  },
+  {
+    "id": 7,
+    "phrase": "See you soon!",
+    "translate": "До скорого!",
+    "active": true
+  },
+  {
+    "id": 8,
+    "phrase": "See you later!",
+    "translate": "Увидимся позже!",
+    "active": true
+  },
+  {
+    "id": 9,
+    "phrase": "Till next time!",
+    "translate": "До следующего раза!",
+    "active": true
+  },
+  {
+    "id": 10,
+    "phrase": "Take care!",
+    "translate": "Береги себя!",
+    "active": true
+  },
+  {
+    "id": 11,
+    "phrase": "Talk to you later!",
+    "translate": "Поговорим с тобой позже!",
+    "active": true
+  },
+  {
+    "id": 12,
+    "phrase": "Until we meet again!",
+    "translate": "До новой встречи!",
+    "active": true
+  },
+  {
+    "id": 13,
+    "phrase": "Have a nice day!",
+    "translate": "Хорошего дня!",
+    "active": true
+  },
+  {
+    "id": 14,
+    "phrase": "Have a good weekend",
+    "translate": "Хороших выходных",
+    "active": true
+  },
+  {
+    "id": 15,
+    "phrase": "Have a safe trip",
+    "translate": "Хорошей поездки",
+    "active": true
+  },
+  {
+    "id": 16,
+    "phrase": "Say hi to …",
+    "translate": "Передавай привет …",
+    "active": true
+  },
+  {
+    "id": 17,
+    "phrase": "Send my love to …",
+    "translate": "Передавай большой привет … (если речь идет о родственниках или близких людях)",
+    "active": true
   }
 ]

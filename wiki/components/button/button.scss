@@ -1,0 +1,37 @@
+:root{
+  --primary: #82BFF8;
+  --secondary: #FFC0CB;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+.btn{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: normal;
+  border-radius: 10px;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--black);
+}
+.btn:hover {
+  background: var(--secondary);
+}
+.btn--primary--solid{
+  background: var(--primary);
+}
+.btn--secondary--solid{
+  background: var(--secondary);
+}
+.btn--medium{
+  width: 300px;
+  height: 50px;
+}
+.btn--small{
+  width: 200px;
+  height: 50px;
+}
