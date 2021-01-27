@@ -14,9 +14,11 @@
 }
 .btn-app:hover {
   background: var(--pink_app);
+  color: var(--white)
 }
 .btn-app--primary--solid{
   background: var(--blue_app);
+  color: var(--white)
 }
 .btn-app--secondary--solid{
   background: var(--secondary);
