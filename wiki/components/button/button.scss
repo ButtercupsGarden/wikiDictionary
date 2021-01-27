@@ -1,10 +1,4 @@
-:root{
-  --primary: #82BFF8;
-  --secondary: #FFC0CB;
-  --white: #FFFFFF;
-  --black: #000000;
-}
-.btn{
+.btn-app{
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   display: flex;
@@ -18,20 +12,20 @@
   line-height: 28px;
   color: var(--black);
 }
-.btn:hover {
+.btn-app:hover {
+  background: var(--pink_app);
+}
+.btn-app--primary--solid{
+  background: var(--blue_app);
+}
+.btn-app--secondary--solid{
   background: var(--secondary);
 }
-.btn--primary--solid{
-  background: var(--primary);
-}
-.btn--secondary--solid{
-  background: var(--secondary);
-}
-.btn--medium{
+.btn-app--medium{
   width: 300px;
   height: 50px;
 }
-.btn--small{
+.btn-app--small{
   width: 200px;
   height: 50px;
 }

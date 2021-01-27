@@ -1,16 +1,16 @@
 import React from 'react'
 
 const STYLES = [
-  "btn--primary--solid",
-  "btn--secondary--solid",
+  "btn-app--primary--solid",
+  "btn-app--secondary--solid",
 ]
 
 const SIZES = [
-  "btn--medium",
-  "btn--small",
+  "btn-app--medium",
+  "btn-app--small",
 ]
 
-export const Button = ({
+export const ButtonApp = ({
   children,
   type,
   onClick,
@@ -22,7 +22,7 @@ export const Button = ({
   const checkButtonSize = SIZES.includes(buttonSize)? buttonSize : SIZES[0]
 
   return (
-    <div type={type} onClick={onClick} className={`btn ${checkButtonStyle} ${checkButtonSize}`}>
+    <div type={type} onClick={onClick} className={`btn-app ${checkButtonStyle} ${checkButtonSize}`}>
       {children}
     </div>
   )

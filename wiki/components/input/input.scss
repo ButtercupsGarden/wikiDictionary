@@ -1,0 +1,29 @@
+.input_area{
+  display: flex;
+  flex-flow: column nowrap;
+}
+.input-label{
+  color: var(--gray);
+}
+.inp{
+  height: 30px;
+  outline: none;
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: var(--gray);
+  border-radius: 10px;
+  padding-left: 7px;
+
+  &--primary{
+    border: 1px solid var(--blue_app);
+  }
+  &--small{
+    width: 200px;
+  }
+  &--medium{
+    width: 250px;
+  }
+  &--large{
+    width: 300px;
+  }
+}

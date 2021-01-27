@@ -13,7 +13,6 @@ function getRandomIntInclusive(min, max, n=1) {
   while (res.size < n) res.add(Math.floor(Math.random() * (max - min + 1)) + min)
   let setIter = res.values()
   return setIter.next().value
-  // return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 export default function Home({data}) {
