@@ -6,29 +6,26 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPlus} from '@fortawesome/free-solid-svg-icons'
 import Router from 'next/router'
 
-function getRandomIntInclusive(min, max, n=1) {
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  let res = new Set()
-  while (res.size < n) res.add(Math.floor(Math.random() * (max - min + 1)) + min)
-  let setIter = res.values()
-  return setIter.next().value
-}
-
 export default function Home({data}) {
-  const [currentPhrase, setCurrentPhrase] = useState(null)
+  const [phrases, setPhrases] = useState(null)
+  const [currentPhrase, setCurrentPhrases] = useState(null)
   const [next, setNext] = useState(0)
 
   useEffect(() => {
-    setTimeout(() => {
-      let id = getRandomIntInclusive(0, data.length - 1, currentPhrase?.id)
-      console.log(data[id])
-      setCurrentPhrase(data[id])
-    }, 0)
-  }, [data, next])
+    setPhrases(() => data)
+    setCurrentPhrases(()=> data[next])
+  }, [data])
+
+  useEffect(()=>{
+    if(next === data.length-1){
+      setNext(0)
+    }
+    setCurrentPhrases(()=> data[next])
+    console.log(currentPhrase)
+  },[next])
 
 
-  if (!currentPhrase) {
+  if (!phrases) {
     return (
       <div className={styles.main}>
         <div className={styles.ldsRoller}>
@@ -62,9 +59,9 @@ export default function Home({data}) {
 }
 
 export async function getServerSideProps() {
-  const {getAllPhrases} = require('../util/util')
+  const {getAllPhrases,shuffle} = require('../util/util')
 
-  const data = getAllPhrases()
+  const data = shuffle(getAllPhrases())
 
   if (!data) {
     return {

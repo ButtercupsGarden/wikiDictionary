@@ -7,11 +7,11 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Router from 'next/router'
 import Header from '../components/Header'
 import List from '../components/list/List'
+const {addPhrase} = require('../util/util')
 
-export default function Add() {
+export default function Add({data}) {
   const [search, setSearch] = useState('')
-  const [data, setData] = useState([1, 2, 3, 4, 5, 6, 7])
-  const [asd, setAsd] = useState(data)
+  const [allPhrases, setPhrases] = useState(data)
 
   const [text1, setText1] = useState('')
   const [text2, setText2] = useState('')
@@ -20,9 +20,10 @@ export default function Add() {
 
   useEffect(() => {
     if (search != '') {
-      setAsd(data.filter((el) => el == search))
+      // dodelat poisk sovpadenie
+      setPhrases(data.filter((el) => el.phrase == search))
     } else {
-      setAsd(data)
+      setPhrases(data)
     }
   }, [search])
 
@@ -32,6 +33,7 @@ export default function Add() {
     obj.phrase = text1
     obj.translate = text2
     obj.active = ch
+    addPhrase(text1,text2,ch)
     console.log(obj)
   }
 
@@ -53,7 +55,7 @@ export default function Add() {
               onChange={(e) => setSearch(e.target.value)}
             />
           </Form.Group>
-          <List data={[{id:1,phrase:24}]}></List>
+          <List data={allPhrases}></List>
         </div>
         <div className={styles.form}>
           <div className={styles.formControls}>
@@ -94,4 +96,20 @@ export default function Add() {
   )
 }
 
+export async function getServerSideProps() {
+  const {getAllPhrases} = require('../util/util')
 
+  const data = getAllPhrases()
+
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      data,
+    },
+  }
+}

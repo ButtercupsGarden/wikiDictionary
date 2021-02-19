@@ -1,10 +1,12 @@
+import styles from './list.module.scss'
+
+
 export default function List({data}) {
-  console.log(data)
   return (
     <div>
-      <ul>
+      <ul className={styles.list}>
         {data && data.map((el)=>(
-          <li key={el.id}>{`id: ${el.id} // ${el.phrase}`}</li>)
+          <li className={styles.phlist} key={el.id}>{`id: ${el.id} || ${el.phrase}`}</li>)
         )}
       </ul>
     </div>
